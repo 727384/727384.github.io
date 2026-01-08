@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <title>Test</title>
-  </head>
+      </head>
   <body>
     <h1>一级标题</h1>
     <h2>二级标题</h2>
@@ -41,7 +41,25 @@
         <li>无序</li>
         <li>列表</li>
     </ul>
+  <button onclick=update(0)>+1</button>
+  <button onclick=update(1)>重置</button>
+  <span id="testaaa"></span>
+  <script>
+      var a;
+      //document.getElementById("testaaa").innerHTML = '0';
+      function update(x)
+      {
+          if (x == 0)
+          {
+              a += 1;
+          }
+          if (x == 1)
+          {
+              a = 0;
+          }
+          document.getElementById("testaaa").innerHTML = String(a);
+      }
+      update(1);
+    </script>
   </body>
 </html>
-
-
