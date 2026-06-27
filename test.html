@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Test</title>
-      </head>
+    <link rel="icon" href="727384.ico">
+  </head>
   <body>
     <h1>一级标题</h1>
     <h2>二级标题</h2>
@@ -17,22 +18,32 @@
     </button>
     <button onclick=window.alert("这是一个窗口。")>又是按钮</button>
     <br>
-    <b>粗体</b>
-    <i>斜体</i>
-    <del>删除线</del>
-    <u>下划线</u>
-    <sup>上标</sup>
-    <sub>下标</sub>
-    <strong>强调</strong>
-    <em>强调</em>
-    <small>小号文本</small>
-    <big>大号文本</big>
-    <q>引用</q>    
-    <mark>带记号的文本</mark>
-    <code>代码</code>
-    <tt>打字机</tt>
+    <b>粗体（b）</b>
+    <i>斜体（i）</i>
+    <del>删除线（del）</del>
+    <u>下划线（u）</u>
+    <sup>上标（sup）</sup>
+    <sub>下标（sub）</sub>
+    <strong>强调（strong）</strong>
+    <em>强调（em）</em>
+    <small>小号文本（small）</small>
+    <big>大号文本（big）</big>
+    <q>引用（q）</q>    
+    <mark>带记号的文本（mark）</mark>
+    <code>代码（code）</code>
+    <tt>打字机（tt）</tt>
+    <kbd>键盘文本（kbd）</kbd>
+    <dfn>定义项目（dfn）</dfn>
+    <samp>计算机样本（samp）</samp>
+    <var>变量（var）</var>
+    <ins>插入文本（ins）</ins>
+    <pre>预格式化文本（pre）</pre>
+    <address>联系信息（address）</address>
+    <p>段落（p）</p>
+    <cite>引用/标题（cite）</cite>
+    <blockquote>长引用（虽然一点也不长，blockquote）</blockquote>
+    <center>文本居中（center）</center>
     <a href='https://space.bilibili.com/2095824177'>链接</a>
-    <p>段落</p>
     <ol>
         <li>有序</li>
         <li>列表</li>
@@ -41,12 +52,58 @@
         <li>无序</li>
         <li>列表</li>
     </ul>
+  <dl>
+    <dt>描述</dt>
+      <dd>列表</dd>
+  </dl>
+  <input value="输入框（input）">
+  <textarea>文本区（textarea）</textarea>
+  <br>
+<table>
+  <thead>
+    <tr>
+      <th>这是</th>
+      <th>表头</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>这是</td>
+      <td>主体</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>这是</td>
+      <td>页脚</td>
+    </tr>
+  </tfoot>
+
+</table>
+  <br>
+  一些语义化标签
+  <br>
+  <main>主体部分（main）</main>
+  <aside>侧栏（aside）</aside>
+  <article>文章（article）</article>
+  <section>分节（section）</section>
+  <nav>导航（nav）</nav>
+  <hr>
   <button onclick=update(0)>+1</button>
   <button onclick=update(1)>重置</button>
   <span id="testaaa"></span>
+  <br>
+  <img src="https://count.getloli.com/@727384stest?name=727384stest&theme=moebooru&padding=6&offset=0&align=top&scale=1&pixelated=1&darkmode=auto&num=727384" alt="727384stest" vspace=10>
+  <br>
+  testtesttest
   <script>
-      var a;
-      //document.getElementById("testaaa").innerHTML = '0';
+      if (window.localStorage.getItem("test123") == null)
+      {
+          console.log('111');
+          window.localStorage.setItem("test123", 0);
+      }
+      var a = window.localStorage.getItem("test123") - 0;
+      document.getElementById("testaaa").innerHTML = a;
       function update(x)
       {
           if (x == 0)
@@ -57,9 +114,9 @@
           {
               a = 0;
           }
+          localStorage.setItem("test123", a);
           document.getElementById("testaaa").innerHTML = String(a);
       }
-      update(1);
     </script>
   </body>
 </html>
