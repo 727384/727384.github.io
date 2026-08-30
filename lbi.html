@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="727384.ico" rel="icon">
+		<title>loong-big-integer</title>
+	</head>
+	<h1>loong-big-integer</h1>
+	一系列大整数库/头文件的结合。
+	<br>
+	最后更新：2026/8/29
+	<h2>目录</h2>
+	<ol>
+		<li>
+			<a href="#lbi.h">lbi.h</a>
+			<ol>
+				<li>
+					<a href="#lbi.h_function">功能</a>									
+				</li>
+				<li>					
+					<a href="#lbi.h_changelog">更新日志</a>					
+				</li>
+			</ol>
+		</li>
+		<li>
+			<a href="#lbi_c.h">lbi_c.h</a>
+			<ol>
+				<li>
+					<a href="#lbi_c.h_function">功能</a>									
+				</li>
+				<li>					
+					<a href="#lbi_c.h_changelog">更新日志</a>					
+				</li>
+			</ol>
+		</li>
+		<li>
+			<a href="#lbi.py">lbi.py</a>
+			<ol>
+				<li>					
+					<a href="#lbi.py_changelog">更新日志</a>					
+				</li>
+			</ol>
+		</li>
+	</ol>
+	<hr>
+	<h2 id="lbi.h">lbi.h</h2>
+	这是一个大整数运算头文件，使用 C++ 编写，能表示不超过10<sup>2<sup>1024</sup></sup>的整数，并支持各种运算。
+	</ul>
+	<h3 id="lbi.h_function">功能</h3>
+	<h4>类</h4>
+	<ul>
+		<li>
+			loong::lBI
+			<ul>
+				<li>x</li>
+				<li>e</li>
+				<li>input()</li>
+				<li>print(int a = 9, bool b = 0)</li>
+				<li>to_str_old(int a = 9)</li>
+				<li>to_str(int a = 9)</li>
+				<li>to_c_str(int a = 9)</li>
+				<li>to_int()</li>
+				<li>format()</li>
+				<li>
+					运算符重载
+					<ul>
+						<li>二元+</li>
+						<li>二元-</li>
+						<li>二元*</li>
+						<li>/</li>
+						<li>%</li>
+						<li>+=</li>
+						<li>-=</li>
+						<li>*=</li>
+						<li>/=</li>
+						<li>%=</li>
+						<li>一元+</li>
+						<li>一元-</li>
+						<li>~</li>
+						<li>&lt;&lt;</li>
+						<li>&gt;&gt;</li>
+						<li>&lt</li>
+						<li>&gt;</li>
+						<li>&lt;=</li>
+						<li>&gt;=</li>
+						<li>==</li>
+						<li>!=</li>
+						<li>double()</li>
+						<li>std::string()</li>
+						<li>const char*()</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li>std::hash&lt;loong::lBI&gt;</li>
+	</ul>
+	<h4>函数</h4>
+	<i>以下函数均在loong命名空间内。</i>
+	<ul>
+		<li>int_to_lBI(double a = 0)</li>
+		<li>str_to_lBI(std::string a = "")</li>
+		<li>lBI_plus(lBI a, lBI b)</li>
+		<li>lBI_minus(lBI a, lBI b)</li>
+		<li>lBI_multi(lBI a, lBI b)</li>
+		<li>lBI_div(lBI a, lBI b)</li>
+		<li>lBI_mod(lBI a, lBI b)</li>
+		<li>floor(lBI a)</li>
+		<li>ceil(lBI a)</li>
+		<li>round(lBI a)</li>
+		<li>log(lBI a)</li>
+		<li>log10(lBI a)</li>
+		<li>logx(lBI a, lBI b)</li>
+		<li>pow(lBI a, lBI b)</li>
+		<li>sqrtx(lBI a, lBI b)</li>
+		<li>hypot(lBI a, lBI b)</li>
+		<li>sqrt(lBI a)</li>
+		<li>exp(lBI a)</li>
+		<li>abs(lBI a)</li>
+		<li>reci(lBI a)</li>
+		<li>neg(lBI a)</li>
+		<li>frexp(lBI a, lBI* b)</li>
+		<li>ldexp(lBI a, lBI b)</li>
+		<li>cos(lBI a)</li>
+		<li>sin(lBI a)</li>
+		<li>tan(lBI a)</li>
+		<li>cosh(lBI a)</li>
+		<li>sinh(lBI a)</li>
+		<li>tanh(lBI a)</li>
+		<li>acos(lBI a)</li>
+		<li>asin(lBI a)</li>
+		<li>atan(lBI a)</li>
+		<li>atan2(lBI a, lBI b)</li>
+		<li>isnan(lBI a)</li>
+		<li>lBI_format(lBI a)</li>
+		<li>print_lBI(lBI a, int b, bool c)</li>
+		<li>lBI_to_int(lBI a)</li>
+		<li>lBI_to_str_old(lBI a, int b = 9)</li>
+    	<li>lBI_to_str(lBI a, int b = 9)</li>
+    	<li>lBI_to_c_str(lBI a, int b = 9)</li>
+	</ul>
+	<i>以上函数均在loong命名空间内。</i>
+	<h4>常量</h4>
+	<ul>
+		<li>lBI_E</li>
+		<li>lBI_PI</li>
+		<li>lBI_Infinity/Infinity </li>
+		<li>lBI_Nev_Infinity/Nev_Infinity</li>
+		<li>lBI_True_Infinity/True_Infinity</li>
+		<li>lBI_Nev_True_Infinity/Nev_True_Infinity</li>
+		<li>lBI_NAN</li>
+	</ul>
+	<h3 id="lbi.h_changelog">更新日志</h3>
+	<ul>
+		<li>2026/8/30 UPD：新增to_c_str()成员函数和loong::lBI_to_c_str()函数。再次兼容 C++ 98。</li>
+
+		<li>2026/8/28 UPD：修复了一些bug。</li>
+
+		<li>2026/8/27 UPD：修复了一个bug。</li>
+
+		<li>2026/8/25 UPD：无用的更改。</li>
+
+		<li>2026/7/30 UPD：新增loong::atan()、loong::atan2()和loong::atanh()，兼容以前的代码及 C++ 98。</li>
+
+		<li>2026/6/30 UPD：新增std::hash<loong::lBI>。</li>
+
+		<li>2026/6/26 UPD：新增以下数学函数：
+			<ul>
+				<li>loong::frexp()；</li>
+				<li>loong::ldexp()；</li>
+				<li>loong::cos()；</li>
+				<li>loong::sin()；</li>
+				<li>loong::tan()；</li>
+				<li>loong::cosh()；</li>
+				<li>loong::sinh()；</li>
+				<li>loong::tanh()；</li>
+				<li>loong::acos()；</li>
+				<li>loong::asin()。</li>
+			</ul>
+		</li>
+
+		<li>2026/6/16 UPD：再次重构代码并新增loong::str_to_lBI()函数，输入格式也因此改动。现在也可以从std::string构造了。</li>
+
+		<li>2026/5/30 UPD：重构代码并新增loong::hypot()、loong::log()、loong::exp()函数及lBI_E、lBI_PI常量。真正移除了报错（loong::lBI_mod_no_error也因此删除）。</li>
+
+		<li>2026/3/15 UPD：修复了一些bug。</li>
+
+		<li>2026/2/21 UPD：修复了两个bug。</li>
+
+		<li>2026/2/16 UPD：对输出及转字符串函数做较小改动。</li>
+
+		<li>2026/2/11 UPD：将函数loong::运算()更改为loong::lBI_运算()。修复了一个bug。</li>
+
+		<li>2026/2/10 UPD：除模运算外，移除了所有函数的报错。</li>对对数运算、幂运算和n次方根运算进行重构。修复了一个bug。</li>
+
+		<li>2026/2/3 UPD：移除了除法和loong::lBI_to_int()函数的报错。</li>重构除法和loong::lBI_to_int()函数。添加了loong::log10_no_error()和loong::logx_no_error()函数。增lBI_Nev_True_Infinity。</li>
+
+		<li>2026/1/30 UPD：重构to_str()成员函数及loong::lBI_to_str()函数，原函数仍保留（加_old后缀）。把*_Infinity改为了lBI_*_Infinity。</li>新增lBI_NAN。</li>
+
+		<li>2026/1/26 UPD：移除了对__int128的支持。</li>
+
+		<li>2026/1/17 UPD：增加了loong::pow_no_error、loong::lBI_to_int_no_error函数。对输出格式进行了小改动。</li>
+
+		<li>2026/1/14 UPD：对输出及转字符串函数做较大改动。为修复一个bug，将运算符做了较大改动。</li>
+
+		<li>2026/1/8 UPD：现在loong::lBI可以直接转成double和std::string类型了。</li>
+
+		<li>2025/12/28 UPD：新增loong::floor()和loong::ceil()函数。</li>
+
+		<li>2025/12/27 UPD：现在也支持模运算了。</li>
+
+		<li>2025/12/20 UPD：现在也支持一元运算符+、-和~了。</li>
+
+		<li>2025/12/19 UPD：新增loong::isnan()函数和两种输出格式。</li>
+
+		<li>2025/12/14 UPD：新增一种输出格式。新增loong::print_lBI()函数，用于输出数字。</li>
+
+		<li>2025/12/7 UPD：新增构造函数，现在可以直接将整数或浮点数赋值给loong::lBI了。</li>
+
+		<li>2025/12/2 UPD：现在也支持++和--运算符了。</li>
+
+		<li>2025/11/29 UPD：现在四则运算也支持函数形式了。</li>
+
+		<li>2025/10/24 UPD：初次上传代码。</li>
+	</ul>
+	<h2 id="lbi_c.h">lbi_c.h</h2>
+	lbi.h的 C 语言版本。
+	<h3 id="lbi_c.h_function">功能</h3>
+	<h4>类</h4>
+	<ul>
+		<li>lBI</li>
+	</ul>
+	<h4>函数</h4>
+	<ul>
+		<li>int_to_lBI(double a)</li>
+		<li>str_to_lBI(char* a)</li>
+		<li>lBI_plus(struct lBI a, struct lBI b)</li>
+		<li>lBI_minus(struct lBI a, struct lBI b)</li>
+		<li>lBI_multi(struct lBI a, struct lBI b)</li>
+		<li>lBI_div(struct lBI a, struct lBI b)</li>
+		<li>lBI_mod(struct lBI a, struct lBI b)</li>
+		<li>lBI_floor(struct lBI a)</li>
+		<li>lBI_ceil(struct lBI a)</li>
+		<li>lBI_round(struct lBI a)</li>
+		<li>lBI_log(struct lBI a)</li>
+		<li>lBI_log10(struct lBI a)</li>
+		<li>lBI_logx(struct lBI a, struct lBI b)</li>
+		<li>lBI_pow(struct lBI a, struct lBI b)</li>
+		<li>lBI_sqrtx(struct lBI a, struct lBI b)</li>
+		<li>lBI_hypot(struct lBI a, struct lBI b)</li>
+		<li>lBI_sqrt(struct lBI a)</li>
+		<li>lBI_exp(struct lBI a)</li>
+		<li>lBI_abs(struct lBI a)</li>
+		<li>lBI_reci(struct lBI a)</li>
+		<li>lBI_neg(struct lBI a)</li>
+		<li>lBI_frexp(struct lBI a, struct lBI* b)</li>
+		<li>lBI_ldexp(struct lBI a, struct lBI b)</li>
+		<li>lBI_cos(struct lBI a)</li>
+		<li>lBI_sin(struct lBI a)</li>
+		<li>lBI_tan(struct lBI a)</li>
+		<li>lBI_cosh(struct lBI a)</li>
+		<li>lBI_sinh(struct lBI a)</li>
+		<li>lBI_tanh(struct lBI a)</li>
+		<li>lBI_acos(struct lBI a)</li>
+		<li>lBI_asin(struct lBI a)</li>
+		<li>lBI_atan(struct lBI a)</li>
+		<li>lBI_atan2(struct lBI a, struct lBI b)</li>
+		<li>lBI_isnan(struct lBI a)</li>
+		<li>lBI_format(struct lBI a)</li>
+		<li>print_lBI(struct lBI a, int b, bool c)</li>
+		<li>lBI_to_int(struct lBI a)</li>
+    		<li>lBI_to_str(struct lBI a, int b, char* c)</li>
+		<li>lBI_l(struct lBI a, struct lBI b)</li>
+		<li>lBI_le(struct lBI a, struct lBI b)</li>
+		<li>lBI_g(struct lBI a, struct lBI b)</li>
+		<li>lBI_ge(struct lBI a, struct lBI b)</li>
+		<li>lBI_e(struct lBI a, struct lBI b)</li>
+		<li>lBI_ne(struct lBI a, struct lBI b)</li>
+	</ul>
+	<h4>常量</h4>
+	<ul>
+		<li>lBI_E</li>
+		<li>lBI_PI</li>
+		<li>lBI_Infinity/Infinity </li>
+		<li>lBI_Nev_Infinity/Nev_Infinity</li>
+		<li>lBI_True_Infinity/True_Infinity</li>
+		<li>lBI_Nev_True_Infinity/Nev_True_Infinity</li>
+		<li>lBI_NAN</li>
+	</ul>
+	<h3 id="lbi_c.h_changelog">更新日志</h3>
+	<ul>
+		<li>2026/8/30 UPD：修复了一些bug。</li>
+
+		<li>2026/8/28 UPD：初次上传代码。</li>
+	</ul>
+	<h2 id="lbi.py">lbi.py</h2>
+	这是一个大整数运算库，使用 Python 编写。
+	<h3 id="lbi.py_changelog">更新日志</h3>
+	<ul>
+		<li>2026/3/15 UPD：初次上传代码。</li>
+	</ul>
+</html>
