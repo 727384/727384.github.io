@@ -86,7 +86,15 @@
 						<li>!=</li>
 						<li>double()</li>
 						<li>std::string()</li>
-						<li>const char*()</li>
+					</ul>
+				</li>
+				<li>
+					构造函数
+					<ul>
+						<li>lBI()</li>
+						<li>lBI(double a)</li>
+						<li>lBI(double a, double b)</li>
+						<li>lBI(std::string a)</li>
 					</ul>
 				</li>
 			</ul>
@@ -150,6 +158,8 @@
 	</ul>
 	<h3 id="lbi.h_changelog">更新日志</h3>
 	<ul>
+		<li>2026/9/5 UPD：修复了一些bug。</li>
+
 		<li>2026/8/30 UPD：新增to_c_str()成员函数和loong::lBI_to_c_str()函数。再次兼容 C++ 98。</li>
 
 		<li>2026/8/28 UPD：修复了一些bug。</li>
@@ -267,7 +277,7 @@
 		<li>lBI_format(struct lBI a)</li>
 		<li>print_lBI(struct lBI a, int b, bool c)</li>
 		<li>lBI_to_int(struct lBI a)</li>
-    		<li>lBI_to_str(struct lBI a, int b, char* c)</li>
+    	<li>lBI_to_str(struct lBI a, int b, char* c)</li>
 		<li>lBI_l(struct lBI a, struct lBI b)</li>
 		<li>lBI_le(struct lBI a, struct lBI b)</li>
 		<li>lBI_g(struct lBI a, struct lBI b)</li>
